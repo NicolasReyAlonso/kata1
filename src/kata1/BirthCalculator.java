@@ -5,22 +5,28 @@
  */
 package kata1;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  *
  * @author Usuario
  */
 public class BirthCalculator {
+    
+    private final long millisOnYear = 31557600000l;
+    
     public static int calculate_BirthDate(person a){
     int res = 0;
-    Date b = a.getDateofBirth();
-    long time = b.getTime();
-    b = new Date();
+    Calendar b = GregorianCalendar.getInstance();
+    long time = a.getDateofBirth().getTimeInMillis();
+
+    return millisToYear(b.getTimeInMillis() - time);
+    }
     
-    res = (int) ((b.getTime() - time)/31557600000l);
-    
-    return res;
+    private static int millisToYear(long a){
+    return (int) (a/31557600000l);
     }
     
 }

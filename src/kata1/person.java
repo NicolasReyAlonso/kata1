@@ -5,20 +5,20 @@
  */
 package kata1;
 
-import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  *
  * @author Usuario
  */
 public class person {
-    String name;
-    Date birthdate;
+    private String name;
+    private GregorianCalendar birthdate;
     public person(){
     
     }
     
-    public person (String name, Date birthdate){
+    public person (String name, GregorianCalendar birthdate){
         this.name = name;
         this.birthdate = birthdate;
     }
@@ -27,7 +27,7 @@ public class person {
         return name;
     }
     
-    public Date getDateofBirth(){
+    public GregorianCalendar getDateofBirth(){
         return birthdate;
     }
     
@@ -35,7 +35,7 @@ public class person {
         this.name = name;
     }
     
-    public void setDateofBirth(Date birthdate){
+    public void setDateofBirth(GregorianCalendar birthdate){
         this.birthdate=birthdate;
     }
     
