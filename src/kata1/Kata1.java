@@ -5,7 +5,7 @@
  */
 package kata1;
 
-import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  *
@@ -14,7 +14,7 @@ import java.util.Date;
 public class Kata1 {
 
     public static void main(String[] args) {
-        person Gonzi = new person ("Gonzalo", new Date (98, 11, 3));
+        person Gonzi = new person ("Gonzalo", new GregorianCalendar (1998, 11, 3));
         System.out.print(Gonzi.getName() +" age " +BirthCalculator.calculate_BirthDate(Gonzi));
     }
     
