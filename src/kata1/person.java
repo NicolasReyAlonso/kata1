@@ -5,6 +5,8 @@
  */
 package kata1;
 
+
+import java.time.LocalDate;
 import java.util.GregorianCalendar;
 
 /**
@@ -13,12 +15,12 @@ import java.util.GregorianCalendar;
  */
 public class person {
     private String name;
-    private GregorianCalendar birthdate;
+    private LocalDate birthdate;
     public person(){
     
     }
     
-    public person (String name, GregorianCalendar birthdate){
+    public person (String name, LocalDate birthdate){
         this.name = name;
         this.birthdate = birthdate;
     }
@@ -27,7 +29,7 @@ public class person {
         return name;
     }
     
-    public GregorianCalendar getDateofBirth(){
+    public LocalDate getDateofBirth(){
         return birthdate;
     }
     
@@ -35,8 +37,8 @@ public class person {
         this.name = name;
     }
     
-    public void setDateofBirth(GregorianCalendar birthdate){
-        this.birthdate=birthdate;
+    public void setDateofBirth(LocalDate birthdate){
+        this.birthdate = birthdate;
     }
     
 }

@@ -5,6 +5,7 @@
  */
 package kata1;
 
+import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -18,11 +19,12 @@ public class BirthCalculator {
     private final long millisOnYear = 31557600000l;
     
     public static int calculate_BirthDate(person a){
-    int res = 0;
-    Calendar b = GregorianCalendar.getInstance();
-    long time = a.getDateofBirth().getTimeInMillis();
+    LocalDate b = LocalDate.now();
+    int tim = b.getYear();
+    
+    int time = a.getDateofBirth().getYear();
 
-    return millisToYear(b.getTimeInMillis() - time);
+    return tim - time;
     }
     
     private static int millisToYear(long a){
