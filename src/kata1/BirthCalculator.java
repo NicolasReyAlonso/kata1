@@ -6,6 +6,7 @@
 package kata1;
 
 import java.time.LocalDate;
+import java.time.Month;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -24,11 +25,21 @@ public class BirthCalculator {
     
     int time = a.getDateofBirth().getYear();
 
-    return tim - time;
+    return safe_month(tim - time, a.getDateofBirth().getMonth(), b.getMonth());
     }
     
     private static int millisToYear(long a){
     return (int) (a/31557600000l);
     }
+    
+    private static int safe_month (int a, Month b, Month c){
+        int result = a;
+        if(b.getValue()-c.getValue()>0){
+            result--;
+        }
+        
+        return result;
+    }
+    
     
 }
